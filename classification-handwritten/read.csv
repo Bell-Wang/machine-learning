@@ -1,0 +1,25 @@
+DATA README
+The following data is included:
+Xtrain : 20 x 5000 matrix of training data for digits 0 through 9.
+label_train : 5000 dimensional vector containing the corresponding
+class (digit) in Xtrain.
+Xtest : 20 x 500 matrix of testing data for digits 0 through 9.
+label_test : 500 dimensional vector containing the corresponding
+class (digit) in Xtest.
+Q : 784 x 20 matrix of principal components. You will only need this
+matrix for visualizing the images asked for. The original data contains
+28 x 28 images that are vectorized into 784 x 1 vectors. I projected the
+data onto its first 20 principle components to reduce the dimensionality
+of the problem. These components are contained in Q. You can see the
+information captured by these 20 vectors as follows: For a 20 x 1 vector
+"x" from a training or testing matrix, let y = Q*x. Then show this as an
+image, e.g., in Matlab using imagesc(reshape(y,28,28)). The image will
+probably need to be rotated and/or flipped. Some information is lost in
+this process (and the data was centered) so the resulting images won’t
+be crystal clear, but the digit should be recognizable.
+***IMPORTANT (FOR PART 3c ONLY)***
+Before training and testing the classifier, be sure to add a 21st
+dimension to the data set equal to one in order to allow for a shift
+in the decision boundary! Therefore, the classification vectors
+w_0, ..., w_9 should be 21 dimensions. And the 21st row of X show
+be entirely equal to one.
